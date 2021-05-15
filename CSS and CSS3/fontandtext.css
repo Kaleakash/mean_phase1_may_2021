@@ -1,0 +1,13 @@
+.fontClass{
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.textClass {
+    text-transform: lowercase;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    text-shadow: 5px 5px gray;
+}
