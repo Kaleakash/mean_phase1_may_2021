@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Employee(id,name) {
+            this.empId = id;
+            this.empName =name;
+            this.disInfo = function() {
+                document.write("<br/>id is "+this.empId)
+                document.write("<br/>name is "+this.empName)
+            } 
+        }
+        var emp1 = new Employee(100,"Ravi");
+        var emp2 = new Employee(101,"Ramesh");
+        emp1.disInfo();
+        emp2.disInfo();
+
+
+        Employee.prototype.age = 21;            // added age property to employee object 
+
+        alert("First employee age is "+emp1.age);
+        alert("Second employee age is "+emp2.age);
+        emp2.age = 23;
+        alert("First employee age is "+emp1.age);       // 1st emp age is 21
+        alert("Second employee age is "+emp2.age);      // 2nd emp age is 23
+
+        Employee.prototype.setInfo = function(name,age){        // added dynamic function to Employee 
+                            this.empName = name;
+                            this.age = age;
+        }
+        emp1.setInfo("Ravi Kumar",26)
+        emp2.setInfo("Ramesh Patil",28)
+        document.write("<br/>id is "+emp1.empId+" name is "+emp1.empName+" Age is "+emp1.age)
+        document.write("<br/>id is "+emp2.empId+" name is "+emp2.empName+" Age is "+emp2.age)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    function Employee() {
+        var empId=100; //private       // assign property to Employee object 
+        this.empName="Ravi Kumar";
+        this.empSalary = 24000;
+        this.displayInfo = function(){          // behaviour of function to employee object 
+            document.write("id is private "+empId)
+            document.write("name is "+this.empName)
+            document.write("salary is "+this.empSalary)
+            info();
+        }
+        function info() {
+            document.write("<br> Private function")
+        }
+        this.info = function(){
+            document.write("<br> Another info function")
+        }
+    }
+    //Employee();
+    var emp1 = new Employee();
+    //alert(emp1.empId)
+    //alert(emp1.empName)
+    //alert(emp1.empSalary)
+    emp1.empId=-200;
+    emp1.displayInfo();
+    emp1.info();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

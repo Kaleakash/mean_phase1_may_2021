@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        function Employee() {
+            var id=100;
+            this.name = "Ravi"
+            this.empInfo = function() {
+                document.write("<br> Employee function ")
+            }
+            this.dis= function() {
+                document.write("Employee function")
+            }
+        }
+        function Manager() {
+            Employee.apply(this);   // it is use to inheritance. 
+            this.mgrInfo = function() {
+                document.write("<br> Manager function "+this.name)
+            }
+            this.dis= function() {          // function override. 
+                document.write("<br>Manager function")
+            }
+        }
+        var emp1 = new Employee();
+        emp1.empInfo(); 
+        var mgr1 = new Manager();
+        mgr1.mgrInfo();
+        mgr1.empInfo();
+        mgr1.dis();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

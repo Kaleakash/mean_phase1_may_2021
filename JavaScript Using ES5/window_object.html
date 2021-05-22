@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    //window.alert("Welcome to JS")
+    //alert("Welcome to JS")
+    //window.document.write("<br/>Welcome to JS")
+    //document.write("<br/>Welcome to JS")
+    var obj;
+    function openWin() {
+        obj = window.open("info.html","","width=400px,height=400px,top=200,left=200")    
+    }
+    function  closeWin() {
+        obj.close();
+    }
+    </script>
+</head>
+<body>
+    <input type="button" value="Open" onClick="openWin()"/>
+    <input type="button" value="Close" onClick="closeWin()"/>
+</body>
+</html>

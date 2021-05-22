@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+        document.write("<br/>1st Statement")
+            setTimeout('disInfo()', 3000);
+        document.write("<br/>3rd Statement")
+        var obj = setInterval('disInfo1()',1000)
+        function  disInfo() {
+            //document.write("<br/>2nd Statement") // freshe the whole page 
+            document.getElementById("d1").innerHTML="2nd Statement";
+        }
+        var i=0;
+        function disInfo1() {
+            document.getElementById("d2").innerHTML="4th Statement "+i;
+            if(i%2==0){
+                        //document.bgColor="Pink"
+                        //document.fgColor="Red"
+            document.getElementById("myImage").src="gmail.jpg"
+            document.getElementById("p1").style.color="RED";
+            document.getElementById("p1").style.fontSize="20px";
+            }else {
+                        //document.bgColor="yellow"
+                        //document.fgColor="Green"
+            document.getElementById("myImage").src="google.png"
+            document.getElementById("p1").style.color="GREEN";
+            document.getElementById("p1").style.fontSize="30px";
+            }
+            i++;
+        }
+        function stop() {
+            clearInterval(obj)
+        }
+    </script>
+</head>
+<body>
+    <p id="p1">Welcome to JavaScript training</p>
+    <img src="linkedin.png" id="myImage"/><br/>
+    <div id="d1">
+            Hello
+    </div>
+    <div id="d2">
+        Hi
+</div>
+<input type="button" value="stop count" onclick="stop()"/>
+</body>
+</html>
