@@ -71,13 +71,30 @@ let displayNum = function(n){
 document.write("<br> using expression style")
 num.forEach(displayNum);      
 document.write("<br> using expression style with anonymous function")
-//this type of code is use when code using harldy one or two type and logic is simple. 
+//this type of code is use when code using harldy one or two times and logic is simple. 
 num.forEach(function(n){
     document.write("<br> Valule is "+n);
 })
-//this type of code is use when code using harldy one or two type and logic is simple. 
+//this type of code is use when code using harldy one or two times and logic is simple. 
 document.write("<br> using arrow style")
 num.forEach((n)=>document.write("<br> VAlue is "+n))
+
+document.write("<br/> Function with Rest and Spread parameter")
+// function with rest and spread parameter 
+function empInfo(id,name,salary,...skillSet){       //Rest Parameter 
+    document.write("<br> id is "+id);
+    document.write("<br> name is "+name);
+    document.write("<br> Salary is "+salary);
+    document.write("<br/> Number of skillSet is "+skillSet.length)
+    document.write("<br> SkillSet is "+skillSet);
+}
+let tech = ["C","C++","Python","Java"]
+empInfo(100,"Ravi",15000);
+empInfo(101,"Ramesh",17000,"Java");
+empInfo(102,"Raju",25000,"HTML5","CSS3","JS","Angular")
+empInfo(103,"Reeta",35000,tech);            //0 or 4
+empInfo(103,"Reeta",35000,tech[0],tech[1],tech[2],tech[3]);
+empInfo(103,"Reeta",35000,...tech);     //Spread operator 
 
 
 
