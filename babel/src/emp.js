@@ -13,3 +13,6 @@ class Employee {
 let emp = new Employee(100,"Ravi",12000);
 emp.dis();
 
+let num = [10,20,30,40,50];
+num.forEach(e=>console.log(e));
+

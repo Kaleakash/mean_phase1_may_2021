@@ -27,3 +27,8 @@ var Employee = function () {
 
 var emp = new Employee(100, "Ravi", 12000);
 emp.dis();
+
+var num = [10, 20, 30, 40, 50];
+num.forEach(function (e) {
+	return console.log(e);
+});
