@@ -1,0 +1,14 @@
+<div>
+    <h2>Two way data binding using - ngModel attribute</h2>
+    <h3>Using NgModel</h3>
+    Salary:<input type="text" [(ngModel)]="salary"/>
+    <h3>Using property binding</h3>
+    Age:<input type="text" #age (keyup)="changeAge(age.value)" />
+
+    <br/><br/><br/>
+
+    Salary is {{salary}} Age is {{empAge}}<br/>
+    <br/><br/><br/>
+    <input type="text" #message value="Hello" (keyup)="0"/><br/>
+    {{message.value}}
+</div>

@@ -7,4 +7,19 @@
     <br/>
     <input type="button" value="Change desg"
     (click)="changeDesg()"/>
+    <br/>
+    Name :<input type="text" #nameRef/><br/>
+    <input type="button" value="Display Name"
+    (click)="sendName(nameRef)"/>
+    <br/>
+    {{name}}
+    <br/>
+    <div>
+        1st Number :<input type="text" #n1/><br/>
+        2nd Number :<input type="text" #n2/><br/>
+        <input type="button" value="Add" 
+        (click)="addNumber(n1.value,n2.value)"/>
+        <br/>
+        Sum of two number is {{sum}}
+    </div>
 </div>
