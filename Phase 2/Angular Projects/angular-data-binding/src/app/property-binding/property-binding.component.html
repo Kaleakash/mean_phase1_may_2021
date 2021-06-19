@@ -1,0 +1,10 @@
+<div>
+    <h2>One data binding - using property binding</h2>
+    LName :<input type="text" [value]="lname"/><br/>
+    LName is <p [innerText]="lname"></p>
+    LName is <span [innerText]="lname"></span>
+    <br/>
+    <input type="button" value="Click Here"/>
+    <input type="button" value="Click Here" disabled/>
+    <input type="button" value="Click Here" [disabled]="f1"/>
+</div>
