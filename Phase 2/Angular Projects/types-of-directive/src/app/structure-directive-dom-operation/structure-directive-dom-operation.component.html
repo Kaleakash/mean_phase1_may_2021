@@ -1,0 +1,21 @@
+<div>
+    <h2>Student DOM Operation</h2>
+    <div>
+     SId<input type="text" #sid/><br/>
+     SName<input type="text" #sname/><br/>   
+     Age<input type="text" #sage/><br/>
+     <input type="button" value="Add Student"
+     (click)="addStudent(sid,sname,sage)"/>
+
+    </div>
+    <hr/>
+    <ul>
+<li *ngFor="let std of students;let i=index"> 
+    Index Value is {{i}},
+    Id is {{std.sid}},
+     Name is {{std.sname}}, 
+    Age is {{std.age}}
+    <input type="button" value="Delete" (click)="deleteRec(i)"/>
+</li>
+    </ul>
+</div>

@@ -1,0 +1,38 @@
+<div>
+    <h2>Structure directive</h2>
+
+    <div *ngIf="true">Welcome to Angular Training</div>
+    <div *ngIf="flag">Welcome to *ngIf using variable</div>
+    <input type="button" [value]="b1" (click)="changeF1value()"/>
+    <br/>
+    <div *ngIf="f1">
+           Hide the content using button 
+    </div>
+    <hr/>
+    Numbers are {{num}}<br/>
+    Numbers are in list form <br/>
+    <ul>
+       <li *ngFor="let n of num">{{n}}</li> 
+    </ul>
+    <br/>
+    <h3>Students Names are </h3>
+    <ol>
+        <li *ngFor="let std of students">Mr {{std}}</li>
+    </ol>
+    <hr/>
+    <h2>Students Details are:</h2>
+    <table border="1">
+            <tr>
+                <th>SId</th>
+                <th>SName</th>
+                <th>Age</th>
+            </tr>
+            <tr *ngFor="let student of studentsDetails">
+                <td>{{student.sid}}</td>
+                <td>{{student.sname}}</td>
+                <td>{{student.age}}</td>
+            </tr>
+    </table>
+</div>
+
+

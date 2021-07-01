@@ -1,0 +1,30 @@
+<div>
+    <h2>Login Page using Model Driven Form</h2>
+    <form [formGroup]="loginRef" >
+        <label>UserName</label>
+        <input type="text" formControlName="uname"/>
+        <span *ngIf="loginRef.controls.uname.errors && 
+        (loginRef.controls.uname.dirty || loginRef.controls.uname.touched)">
+<span [hidden]="!loginRef.controls.uname.errors.required" style="color:red">UserName is required</span>
+<span [hidden]="!loginRef.controls.uname.errors.minlength" style="color:red">Username must contains min 2 char</span>
+        </span>
+        <br/>
+        <label>Password</label>
+        <input type="password" formControlName="pname"/>
+        <span *ngIf="loginRef.controls.pname.errors && 
+        (loginRef.controls.pname.dirty || loginRef.controls.pname.touched)">
+<span [hidden]="!loginRef.controls.pname.errors.required" style="color:red">Password is required</span>
+<span [hidden]="!loginRef.controls.pname.errors.pattern" style="color:red">Pattern must start with 1 char and 2 digit</span>
+        </span>        
+        
+        <br/>
+        <input type="button" value="Sign In!" (click)="checkUser()" [disabled]="loginRef.invalid"/>
+        <input type="reset" value="reset"/>
+    </form>
+    <br/>
+    {{msg}}
+</div>
+
+
+
+

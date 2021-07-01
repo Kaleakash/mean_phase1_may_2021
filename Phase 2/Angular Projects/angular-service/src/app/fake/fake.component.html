@@ -1,0 +1,20 @@
+<div>
+    <input type="button" value="Call Fake Service"
+    (click)="callService()"/>
+    <br/>
+    <input type="button" value="load data"
+    (click)= "displayInTableFormat()"/>
+    <br/>
+    <table border="1">
+        <tr>
+            <th>User</th>
+            <th>Id</th>
+            <th>Title</th>
+        </tr>
+        <tr *ngFor="let ff of fakeData">
+               <td>{{ff.userId}}</td>
+               <td>{{ff.id}}</td>
+               <td>{{ff.title}}</td>
+        </tr>
+    </table>
+</div>

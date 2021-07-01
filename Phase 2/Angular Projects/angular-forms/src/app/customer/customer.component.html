@@ -1,0 +1,30 @@
+<div>
+    <h2>Customer Details</h2>
+    <form #custRef="ngForm" (ngSubmit)="storeCustomerDetails(custRef)">
+        <label>CustId</label>
+        <input type="text" name="cid" ngModel/><br/>
+        <label>Cust Name</label>
+        <input type="text" name="cname" ngModel/><br/>
+        <label>Gender</label>
+        <input type="radio" name="gender" value="male" ngModel>Male
+        <input type="radio" name="gender" value="female" ngModel>Female<br/>
+        <label>Payment Mode</label>
+        <input type="checkbox" #payment1 value="debit" (change)="paymentInfo(payment1)">Debit
+        <input type="checkbox" #payment2 value="credit" (change)="paymentInfo(payment2)">Credit
+        <input type="checkbox" #payment3 value="upi" (change)="paymentInfo(payment3)">UPI<br/>
+        <label>City</label>
+        <select name="city" ngModel multiple>
+            <option>--Select City--</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Pune">Pune</option>
+        </select>
+        <br/>
+        <label>Address</label>
+        <textarea name="address" ngModel>
+
+        </textarea><br/>
+        <input type="submit" value="submit"/>
+    </form>
+</div>

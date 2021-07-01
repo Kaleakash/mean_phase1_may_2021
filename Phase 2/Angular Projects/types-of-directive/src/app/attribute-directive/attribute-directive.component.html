@@ -1,0 +1,16 @@
+<div>
+    <h2>Attribute directive</h2>
+    <p style="color: brown;">Welcome to CSS effect using normal style attribute</p>
+    <p [ngStyle]="{'color':'green'}">Welcome to CSS effect using ngStyle from Angular</p>
+    <p [ngStyle]="styleVariable">Welcome to CSS effect using ngStyle with variable</p>
+<p class="firstClass">Welcome to CSS effect using External Normal CSS class selector</p>
+<p [ngClass]=" 'firstClass' ">Welcome to CSS effect using ngClass angular attribute</p>
+<p [ngClass]="{firstClass:false}">Welcome to CSS effect using ngClass with condition</p>
+<p [ngClass]="{firstClass:true}">Welcome to CSS effect using ngClass with condition</p>
+<p [ngClass]="{firstClass:f1}">Welcome to CSS effect using ngClass with condition</p>
+<input type="button" value="click" (click)="fun1()"/><br/>
+<p [ngClass]="{firstClass:f1,secondClass:f2}">Multiple class Effect</p>
+<input type="button" value="switch effect" (click)="fun2()"/>
+<br/>
+
+</div>
