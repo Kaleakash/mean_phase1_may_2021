@@ -17,5 +17,9 @@ export class ProductService {
    return this.http.get<Product[]>("http://localhost:3000/product")
   }
 
+  // post method takes two parameter 1st url and 2nd json data. 
+  storeProductDetails(product:Product):any{
+    return this.http.post("http://localhost:3000/product",product)
+   }
 
 }

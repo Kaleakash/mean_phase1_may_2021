@@ -2,6 +2,7 @@
     <h2>Display all products</h2>
     <input type="button" value="Load Data" (click)="loadJsonData()"/>
     <br/>
+    <div *ngIf="flag">
     <table border="1">
             <tr>
                 <th>PId</th>
@@ -9,9 +10,10 @@
                 <th>Price</th>
             </tr>
             <tr *ngFor="let p of products">
-                <td>{{p.pid}}</td>
+                <td>{{p.id}}</td>
                 <td>{{p.pname}}</td>
                 <td>{{p.price}}</td>
             </tr>
     </table>
+    </div>
 </div>

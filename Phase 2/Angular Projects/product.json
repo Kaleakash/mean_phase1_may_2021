@@ -1,6 +1,35 @@
 {
-	"product":[
-	{"pid":100,"pname":"Tv","price":120000},
-	{"pid":101,"pname":"Computer","price":55000}
-	]
+  "product": [
+    {
+      "id": 100,
+      "pname": "Tv",
+      "price": 120000
+    },
+    {
+      "id": 101,
+      "pname": "Computer",
+      "price": 55000
+    },
+    {
+      "pid": "102",
+      "pname": "Laptop",
+      "price": "85000",
+      "id": 102
+    },
+    {
+      "id": "103",
+      "pname": "Mobile",
+      "price": "24000"
+    },
+    {
+      "id": "104",
+      "pname": "Mac",
+      "price": "200000"
+    },
+    {
+      "id": "105",
+      "pname": "Sony TV",
+      "price": "150000"
+    }
+  ]
 }

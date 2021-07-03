@@ -10,12 +10,14 @@ import { ProductService } from '../product.service';
 })
 export class ViewProductComponent implements OnInit {
   products:Array<Product>=[];   // created the empty array to load theata 
+  flag:boolean = false;
   constructor(public pService:ProductService) { } //DI for ProductService
 
   ngOnInit(): void {
   }
 
   loadJsonData(): void {
+    this.flag=true;
     this.pService.getAllProductDetails().
     subscribe(result=>this.products=result,err=>console.log(err))
   }

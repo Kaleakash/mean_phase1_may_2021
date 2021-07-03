@@ -1,6 +1,7 @@
+//entity 
 export class Product {
     constructor(
-        public pid:number,
+        public id:number,
         public pname:string,
         public price:number){}
 }

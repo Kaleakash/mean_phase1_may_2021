@@ -7,6 +7,7 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
     ViewProductComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule
+    BrowserModule,HttpClientModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
