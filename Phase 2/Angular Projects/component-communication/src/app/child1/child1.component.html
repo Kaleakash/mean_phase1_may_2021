@@ -1,0 +1,10 @@
+<div>
+    <h2>This is Child 1 component</h2>
+    Parent Name is {{parentName}}
+    <br/>
+    Age :<input type="text" #age/><br/>
+    <input type="button" value="pass Age"
+    (click)="storeAge(age)"/>
+    <br/>
+    Child age is {{cAge}}
+</div>

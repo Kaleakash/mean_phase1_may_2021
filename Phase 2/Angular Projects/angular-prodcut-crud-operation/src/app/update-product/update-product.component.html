@@ -1,1 +1,14 @@
-<p>update-product works!</p>
+<div>
+    <h2>Update Product Price</h2>
+    <form #productRef="ngForm" 
+    (ngSubmit)="updateProduct(productRef)">
+        <label>PId</label>
+        <input type="text" name="id" ngModel/><br/>
+        <label>PName</label>
+        <input type="text" name="pname" ngModel/><br/>
+        <label>Price</label>
+        <input type="text" name="price" ngModel/><br/>
+        <input type="submit" value="submit"/>
+        <input type="reset" value="reset"/>
+    </form>
+</div>

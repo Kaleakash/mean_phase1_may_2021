@@ -22,4 +22,16 @@ export class ProductService {
     return this.http.post("http://localhost:3000/product",product)
    }
 
+   // put (update) takes two parameter 
+   //1st paramter url 
+   //2nd paramter json data
+
+   updateProductPrice(product:Product):any{
+     return this.http.put("http://localhost:3000/product/"+product.id,product);
+   }
+
+   deleteProductById(id:any):any{
+     return this.http.delete("http://localhost:3000/product/"+id)
+   }
+
 }

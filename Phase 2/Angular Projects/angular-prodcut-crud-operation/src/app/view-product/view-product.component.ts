@@ -9,7 +9,9 @@ import { ProductService } from '../product.service';
   styleUrls: ['./view-product.component.css']
 })
 export class ViewProductComponent implements OnInit {
-  products:Array<Product>=[];   // created the empty array to load theata 
+  products:Array<Product>=[
+    
+  ];   // created the empty array to load theata 
   flag:boolean = false;
   constructor(public pService:ProductService) { } //DI for ProductService
 

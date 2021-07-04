@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-delete-product',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(public pService:ProductService) { } //DI for Service 
 
   ngOnInit(): void {
   }
 
+  deleteProduct(idRef:any){
+    let id = idRef.value;
+    console.log(id);
+    this.pService.deleteProductById(id).
+    subscribe((result:any)=>console.log(result),
+    (error:any)=>console.log(error))
+  }
 }

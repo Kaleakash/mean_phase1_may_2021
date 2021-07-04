@@ -1,0 +1,25 @@
+<div>
+  <h2>This is parent Component</h2>
+  
+  Name:<input type="text" #name/><br/>
+  <input type="button" value="passName"
+  (click)="store(name)"/><br/>
+ Name in parent component is {{pName}}
+ <br/>
+ Child Age is {{childAge}}
+ <br/>
+ 
+ <input type="button" value="call child2 function"
+ (click)="callChildData()"/>
+ Child Designation is {{childDesg}}
+
+ <br/>
+<hr/>
+      <app-child1 [parentName]="pName"
+      (obj)="childAge=$event"></app-child1>
+<hr/>
+
+<app-child2></app-child2>
+
+<hr/>
+</div>

@@ -1,0 +1,31 @@
+<div>
+  <h2>Angular Pipe</h2>
+  Name is {{name}}<br/>
+  Name is {{name | uppercase}}<br/>
+  Name is {{name | lowercase}}<br/>
+  Salary is {{salary}}<br/>
+  Salary is {{salary | currency}}<br/>
+  Salary is {{salary | currency :'INR'}}<br/>
+  Salary is {{salary | currency :'&#8377;'}}<br/>
+  Date Details is {{dob}} <br/>
+  Date Details is {{dob | date}}<br/>
+  Date Details is {{dob | date :'short'}}<br/>
+  Date Details is {{dob | date :'long'}}<br/>
+  Date Details is {{dob | date :'dd-MM-yyyy'}}<br/>
+  Date Details is {{dob | date :'MM-dd-yy'}}<br/>
+  <br/>
+  <table border="1">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+      </tr>
+      <tr *ngFor="let emp of employees">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name | GenderPipe :emp.gender}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.age}}</td>
+      </tr>
+  </table>
+</div>

@@ -1,16 +1,6 @@
 {
   "product": [
     {
-      "id": 100,
-      "pname": "Tv",
-      "price": 120000
-    },
-    {
-      "id": 101,
-      "pname": "Computer",
-      "price": 55000
-    },
-    {
       "pid": "102",
       "pname": "Laptop",
       "price": "85000",
@@ -24,12 +14,7 @@
     {
       "id": "104",
       "pname": "Mac",
-      "price": "200000"
-    },
-    {
-      "id": "105",
-      "pname": "Sony TV",
-      "price": "150000"
+      "price": "220000"
     }
   ]
 }
