@@ -1,14 +1,10 @@
-<div>
-  <app-header></app-header>
-  <h2>Welcome to My Angular Project Akash</h2>
-  <p>Id is {{id}}, name is {{fname}}, age is {{age}}
-    Result is {{result}}
-  </p>
-  <p>
-    {{dis()}}
-  </p>
-  <app-child></app-child>
-  <app-child></app-child>
-  <app-child></app-child>
-  <app-child></app-child>
+<div class="container">
+  <h2>Angular Routing Example</h2>
+  <a routerLink="aboutus">About Us</a>
+  <a routerLink="contactus">Contact Us</a>
+  <a routerLink="login">Login</a>
+  <hr/>
+  <router-outlet></router-outlet>
+  <br/>
+  
 </div>

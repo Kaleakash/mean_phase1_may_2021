@@ -1,0 +1,9 @@
+<div>
+    <h2>Welcome to Home Page {{user}}</h2>
+
+    <a routerLink="vieworders">View Orders</a>
+    <router-outlet></router-outlet>
+
+    <br/>
+    <input type="button" value="logout" (click)="logout()"/>
+</div>
