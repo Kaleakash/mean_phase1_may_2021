@@ -2,7 +2,11 @@ let express = require("express");
 let bodyParser = require("body-parser");
 
 let app = express();
-
+//Middleware 
+// this property is use to eanble post data receieve from form
+//app.use(bodyParser.urlencoded({extended:true}))
+//Enable json data from request body part 
+app.use(bodyParser.json())  
 let emp = {id:100,name:"Rajesh",age:21};        // literal style object creation 
 let employees = [
     {id:1,name:"Raj",age:23},
@@ -51,6 +55,37 @@ app.get("/queryParamMultipleValue",(req,res)=> {
 app.get("/singlePath/:name",(req,res)=> {
     let name = req.params.name;
     res.send("Welcome user "+name);
+});
+
+//Post Method 
+// http://localhost:9090/postMethod 
+app.post("/postMethod",(req,res)=> {
+    res.send("Welcome to Post method");
+})
+
+//Post method 
+// http://localhost:9090/empStore 
+app.post("/empStore",(req,res)=> {
+    let emp = req.body;
+    console.log(emp);
+    res.send("Employee record store");
+});
+
+// put method 
+// http://localhost:9090/empUpdate 
+
+app.put("/empUpdate",(req,res)=> {
+    let emp = req.body;
+    emp.salary = emp.salary+2000;
+    res.json(emp);
+})
+
+// delete method 
+// http://localhost:9090/deleteEmpRec/100
+
+app.delete("/deleteEmpRec/:id",(req,res)=> {
+    let id = req.params.id;
+    res.send("REcord deleted successfully using id as "+id);
 });
 
 app.listen(9090,()=>console.log("Server running on port number 9090"));
