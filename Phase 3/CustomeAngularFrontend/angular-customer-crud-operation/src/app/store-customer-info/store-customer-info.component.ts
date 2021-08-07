@@ -27,7 +27,7 @@ export class StoreCustomerInfoComponent implements OnInit {
     result=>{
       this.msg=result;
           if(this.displayComponent!=undefined){
-            this.displayComponent.loadDataFromService();
+              this.displayComponent.loadDataFromService();
           }
       },
     error=>console.log(error))
