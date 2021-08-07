@@ -12,11 +12,13 @@ export class DisplayCustomerDetailsComponent implements OnInit {
   constructor(public custService:CustomerService) { }
 
   ngOnInit(): void {
+    this.loadDataFromService();
+  }
+  loadDataFromService() : void {
     this.custService.getAllCustomerDetails().
     subscribe(result=>this.customers=result,
     error=>console.log(error));
   }
-
   /*
    subscribe(result.data=>this.customers=result.data,
   */

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CustomerService } from '../customer.service';
+import { DisplayCustomerDetailsComponent } from '../display-customer-details/display-customer-details.component';
 
 @Component({
   selector: 'app-store-customer-info',
@@ -9,6 +10,12 @@ import { CustomerService } from '../customer.service';
 })
 export class StoreCustomerInfoComponent implements OnInit {
   msg:string="";
+  
+  // creating the reference of child component 
+  // DI for Child component 
+  @ViewChild(DisplayCustomerDetailsComponent)
+  displayComponent?:DisplayCustomerDetailsComponent;
+
   constructor(public custService:CustomerService) { } //DI for Customer Service
 
   ngOnInit(): void {
@@ -17,7 +24,12 @@ export class StoreCustomerInfoComponent implements OnInit {
     let customer = customerRef.value;
     //console.log(customer);
     this.custService.storeCustomerDetails(customer).subscribe(
-    result=>this.msg=result,
+    result=>{
+      this.msg=result;
+          if(this.displayComponent!=undefined){
+            this.displayComponent.loadDataFromService();
+          }
+      },
     error=>console.log(error))
   }
 }
