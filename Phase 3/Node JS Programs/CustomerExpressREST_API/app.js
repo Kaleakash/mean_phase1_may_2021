@@ -32,7 +32,7 @@ app.get("/findCustomer/:cid",(req,res)=> {
 });
 
 // create new customer 
-// http://localhost:9090/customerStore
+    // http://localhost:9090/customerStore
 // {"cid":100,"cname":"Ravi","age":21,"address":{"city":"Bangalore","state":"Kar"}}
 // {"cid":102,"cname":"Ajay","age":24,"address":{"city":"Mumbai","state":"Kar"}}
 app.post("/customerStore",(req,res)=> {
