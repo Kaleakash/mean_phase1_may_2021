@@ -36,7 +36,7 @@ app.get("/findCustomer/:cid",(req,res)=> {
 // {"cid":100,"cname":"Ravi","age":21,"address":{"city":"Bangalore","state":"Kar"}}
 // {"cid":102,"cname":"Ajay","age":24,"address":{"city":"Mumbai","state":"Kar"}}
 app.post("/customerStore",(req,res)=> {
-    let customer = req.body;
+    let customer = req.body;			// undefined. 
     let result = customers.find(c=>c.cid==customer.cid);
     if(result==undefined){
             customers.push(customer);
