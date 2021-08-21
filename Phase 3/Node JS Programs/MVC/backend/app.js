@@ -1,6 +1,5 @@
 // load all modules 
 let express = require("express");
-let bodyParser = require("body-parser");
 let mongoose = require("mongoose");
 let cors = require("cors");
 let port  = 9090 || process.env.port;
@@ -10,11 +9,16 @@ let employeeRouter = require("./router/employee.router");
 // creting the reference of express 
 let app = express();
 
+// avoid warning for Db 
+let options = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}
 // connect the database. 
-mongoose.connect(url).then(result=>console.log("Connected")).catch(error=>console.log(error));
+mongoose.connect(url,options).then(result=>console.log("Connected")).catch(error=>console.log(error));
 
 // middleware 
-app.use(bodyParser.json());     //enable json body data from request. 
+app.use(express.json());     //enable json body data from request. 
 app.use(cors());                // enable to access front end technologies 
 
 // path matching and re-direct to router file
