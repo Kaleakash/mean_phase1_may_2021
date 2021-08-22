@@ -12,14 +12,12 @@ let storeEmloyeeDetails = async (req,res)=> {
     employee._id=empId; 
     employeeModel.insertMany(employee,(err)=> {
         if(!err){
-
             res.json({"msg":"Record stored successfully"})
         }else {
             res.json({"msg":err.writeErrors[0].errmsg});
         }
     })
 }
-
 let getAllEmployeeDetails = (req,res)=> {
     employeeModel.find({},(err,doc)=> {
         if(!err){
