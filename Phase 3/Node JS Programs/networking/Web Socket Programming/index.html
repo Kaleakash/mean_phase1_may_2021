@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/JavaScript">
+    // connect to web socket application 
+    let ws = new WebSocket("ws://localhost:9090");
+
+    // to send the message to server 
+    ws.onopen = ()=> {
+            ws.send("Hello Server, I am WS Client1");
+            fun = ()=> {
+                let data = document.getElementById("info").value
+                //console.log("Fun called..")
+                ws.send(data);
+                document.getElementById("info").value="";
+            } 
+    }
+    // This function is use to receive the value from server using websocket
+    ws.onmessage = (msg)=> {
+        //console.log(msg);
+        document.getElementById("output").innerHTML=`<b>Server Say: <b/> ${msg.data}`;
+    }
+    </script>
+</head>
+<body>
+    <h2>WebSocket Program index</h2>
+    <textarea id="output" rows="10" cols="90"></textarea><br/>
+    <textarea id="info">
+
+    </textarea><br/>
+    <input type="button" value="Send" onclick="fun()"/>
+</body>
+</html>
