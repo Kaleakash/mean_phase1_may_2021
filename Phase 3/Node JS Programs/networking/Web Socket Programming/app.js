@@ -5,7 +5,7 @@ let express = require("express");
 let app = express();
 
 // now load the express-ws module and create the 
-// reference with the help of express app. 
+// reference with the help of express app. IIEF 
 let ws = require("express-ws")(app);
 
 //  http://localhost:9090
@@ -20,7 +20,7 @@ app.ws("/",(socket,req)=> {
     console.log("Client connected....");
     // This function is use to receive the message from web socket cliet application.
     socket.on("message",(msg)=> {
-        console.log(msg.toString())
+             console.log(msg.toString())
         socket.send(msg.toString());
     })
     // This code server send the message to client

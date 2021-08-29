@@ -15,7 +15,7 @@
             fun = ()=> {
                 let data = document.getElementById("info").value
                 //console.log("Fun called..")
-                ws.send(data);
+                ws.send(data);  // send data again and again
                 document.getElementById("info").value="";
             } 
     }

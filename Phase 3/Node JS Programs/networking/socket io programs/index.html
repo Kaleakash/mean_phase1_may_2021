@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- connecting to library part of node_module folder-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/JavaScript">
+    let socket = io();      // call io function part of library 
+    // this function is use to pass the value to socket.io using key chat
+    // key name may be anything. both must key name must be match in 
+    // html and server side.
+    socket.emit("chat","Hello Server I am client");  // text data 
+    socket.emit("chat",{"id":100,name:"Ravi","age":24})  // json data
+    function sendData() {
+        let info = document.getElementById("info").value;
+        socket.emit("chat",info);
+        document.getElementById("info").value=""
+        socket.on("msg",(data)=> {
+            console.log(data);
+            document.getElementById("output").innerHTML=info;
+        })
+    }
+    </script>
+</head>
+<body>
+    <h2>Welcome Socket.io Programming</h2>
+    <textarea id="output" cols="30" rows="10">
+
+    </textarea><br/>
+    <input type="text" id="info"/>
+    <br/>
+    <input type="button" value="Click Here" onclick="sendData()"/>
+    <br/>
+</body>
+</html>
