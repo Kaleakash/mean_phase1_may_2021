@@ -4,6 +4,7 @@ let mongoose = require("mongoose");
 //mongoose.global = mongoose.Promise; 
 let app = express();
 let userRouter = require("./router/userRouter");
+let productRouter = require("./router/productRouter");
 
 app.use(express.json());    // enable request body part data. 
 app.use(cors());            // enable to call from angular 
@@ -17,6 +18,6 @@ catch(err=>console.log(err));
 
 // main path match 
 app.use("/api/login",userRouter);
-
+app.use("/api/product",productRouter);
 
 app.listen(9090,()=>console.log("Server running on port number 9090"));
