@@ -1,5 +1,7 @@
+// Player class object creation 
 function Player() {
 }
+// adding behaviour to player object 
 Player.prototype.play = function(song) {
   this.currentlyPlayingSong = song;
   this.isPlaying = true;
