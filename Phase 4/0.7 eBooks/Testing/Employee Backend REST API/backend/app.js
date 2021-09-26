@@ -22,7 +22,9 @@ app.use(express.json());     //enable json body data from request.
 app.use(cors());                // enable to access front end technologies 
 
 // path matching and re-direct to router file
-// http://localhost:9090/ap/employees 
+// http://localhost:9090/api/employees 
+// http://localhost:9090/api/employees/getAllEmployeeDetails
+
 app.use("/api/employees",employeeRouter);
 //app.use("/api/products",productRouter);
 
