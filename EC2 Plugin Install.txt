@@ -4,19 +4,24 @@ sudo yum -y update
 
 Git install 
 
-sudo yum install git -y
+sudo yum install git -y		: This command is use to install git in EC2 instance 
 
-node --version 
+
+------------------------------------------------------------------------------------------------------------------------
 
 
 install node 
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
-
 . ~/.nvm/nvm.sh
 
 nvm install node		(node version manager)
+
+node --version 
+
+-----------------------------------------------------------------------------------------------------------------------
+
 
 install mongodb database 
 
@@ -54,14 +59,17 @@ Then to run the application
 
 mongo 
 
+-------------------------------------------------------------------------------------------
 
 install docker 
 
-sudo yum install docker
+sudo yum install docker		: please yes option 
 
-sudo service docker start
+sudo service docker start		: This command is use to start the docker 
 
 sudo docker info
+
+in EC2 all docker command start with sudo command 
 
 
 
