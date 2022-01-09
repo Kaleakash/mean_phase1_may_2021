@@ -8,15 +8,15 @@ import { Employee } from './employee';
   providedIn: 'root'
 })
 export class EmployeeService {
-
+url:string ="http://localhost:9090/api/employees"
   constructor(public http:HttpClient) { }   //DI for httpClient 
 
   storeEmployeeRecord(employee:Employee):Observable<any>{
-    return this.http.post<any>("http://localhost:9090/api/employees/employeeStore",employee);
+    return this.http.post<any>(url+"/employeeStore",employee);
   }
 
   retreiveAllEmployeeRecords():Observable<Employee[]> {
-    return this.http.get<Employee[]>("http://localhost:9090/api/employees/getAllEmployeeDetails").
+    return this.http.get<Employee[]>(url+"/getAllEmployeeDetails").
     pipe(map(res=>res.map(data=>{
       data.salary=data.salary+1000;
       return data;

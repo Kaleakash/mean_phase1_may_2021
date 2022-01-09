@@ -11,7 +11,8 @@ let url = "mongodb://localhost:27017/projectinfo";
 
 mongoose.connect(url);
 
-// http://localhost:9090/api/product/
+// http://localhost:9090/api/product/storeProdcutInfo
+// http://localhost:9090/api/product/getProductInfo
 app.use("/api/product",productRouter);
 
 
